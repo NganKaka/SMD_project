@@ -253,22 +253,24 @@ function ProjectsSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0 w-full mb-12 overflow-hidden rounded-[32px] shadow-2xl">
          <div className="relative group w-full h-[300px] md:h-[450px]">
             <img src="/images/tu_phu_chau_ba.png" alt="Tứ Phủ Châu Bà" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#A259FF]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-               <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Dự án Tứ Phủ Châu Bà</p>
-            </div>
+            <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-1">
+  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Công nghệ thực tế ảo</p>
+  <p className="text-white font-bold text-lg px-4 text-center tracking-wide opacity-90">Nhóm Holdon</p>
+</div>
          </div>
          <div className="relative group w-full h-[300px] md:h-[450px]">
             <img src="/images/thumbnail_brainrot.png" alt="Brainrot" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#A259FF]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-               <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Brainrot: Lỗi thuộc về ai?</p>
-            </div>
+            <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
+  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
+</div>
          </div>
          <div className="relative group w-full h-[300px] md:h-[450px]">
             <img src="/images/thumbnail_ytb.png" alt="Bên Trái Kiên Trình" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#A259FF]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-               <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Bên Trái Kiên Trình</p>
-            </div>
-         </div>
+            <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
+              <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
+            </div> </div>
       </div>
       
       <PrimaryButton>Xem thêm</PrimaryButton>
@@ -277,7 +279,7 @@ function ProjectsSection() {
 }
 
 function MomentsSection() {
-  const overlayText = '\"Halloween năm nay thật đặc biệt. Giữa những ngày học tập bận rộn, chúng mình đã có khoảnh khắc cùng nhau \"hóa thân\", cùng nhau vui và cùng nhau lưu giữ những kỷ niệm thật đẹp.\nCảm ơn cả lớp vì đã biến Halloween này thành một ký ức rực rỡ và đầy cảm xúc.\"';
+  const overlayText = ['\"Halloween năm nay thật đặc biệt. Giữa những ngày học tập bận rộn, chúng mình đã có khoảnh khắc cùng nhau \"hóa thân\", cùng nhau vui và cùng nhau lưu giữ những kỷ niệm thật đẹp.\nCảm ơn cả lớp vì đã biến Halloween này thành một ký ức rực rỡ và đầy cảm xúc.\"','\“Là một sinh viên, mình đã quen với hình ảnh thầy cô của SMD nói riêng và của UEH nói chung luôn nghiêm túc và tận tâm đồng hành cùng mình trong từng bài tập, từng dự án với những góp ý đầy tâm huyết. Nhưng tại UEH Day, thầy cô lại xuất hiện với một diện mạo hoàn toàn khác – sôi nổi, hài hước và không ngại "hóa thân" để ủng hộ tinh thần cho đồng đội. Chỉ một lần tham gia nhưng để lại cho em rất nhiều ấn tượng. Đằng sau hình ảnh nghiêm túc thường ngày là những người thầy, người cô vô cùng gần gũi, năng động và tràn đầy năng lượng. Em xin cảm ơn SMD đã tạo cơ hội để em được trải nghiệm, kết nối và nhìn thấy một "phiên bản" khác đầy thú vị của giảng viên UEH!\”','\“Tấm ảnh này được tụi mình chụp vào một khung cảnh buổi chiều hoàng hôn trước cổng chính của Đại Học Thanh Hoa. Đối với mình tấm ảnh này không chỉ chứa đựng kỷ niệm của 3 chị em tụi mình, mà còn thể hiện tình bạn, sự hiếu khách của các bạn trẻ ở đất nước Trung Quốc. Tấm ảnh nhỏ nhắn được một cặp đôi chụp cho tụi mình, mặc dù gặp khó khăn trong giao tiếp khi họ không giỏi tiếng Anh, nhưng họ vẫn rất nhiệt tình giúp tụi mình chụp ảnh và tụi mình cũng vậy. Tụi mình không ngần ngại giúp họ có những tấm hình rất tâm đắc...\”','\“Bức ảnh lớp mình chụp trong buổi 20/10 (trễ) thật sự rạng rỡ và tươi tắn. Hôm đó, các bạn nữ ai cũng xinh đẹp nổi bật, còn các bạn nam thì rất nhiệt tình, chu đáo trong vai trò tổ chức. Mọi người cùng đứng sát bên nhau, trao nhau những nụ cười thật tươi và lời chúc mừng ý nghĩa. Tấm hình này gói trọn không khí vui vẻ, ấm áp và tinh thần đoàn kết tuyệt vời của cả lớp trong ngày tôn vinh Phụ nữ Việt Nam. Một kỷ niệm thật đẹp dành cho mọi người!\”'];
   return (
     <section className="bg-[#FDF6FF] py-24 w-full border-t border-b border-[#EACCF0]/50 mt-10">
       <div className="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col items-center">
@@ -291,8 +293,8 @@ function MomentsSection() {
              <div key={i} className="relative group w-full overflow-hidden hover:-translate-y-2 transition-transform duration-300 rounded-[24px]">
                 <img src={`/images/Moment_${i}.jpg`} alt={`Moment ${i}`} className="w-full h-auto object-contain drop-shadow-sm" />
                 <div className="absolute inset-0 bg-[#3a1d52]/80 flex flex-col items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                   <p className="text-white text-[12px] font-medium text-center leading-relaxed whitespace-pre-wrap">
-                     {overlayText}
+                   <p className="text-white text-[10px] font-medium text-center leading-relaxed whitespace-pre-wrap">
+                     {overlayText[i-1]}
                    </p>
                 </div>
              </div>
