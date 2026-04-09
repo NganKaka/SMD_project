@@ -288,18 +288,12 @@ function MomentsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mb-12">
           {[1,2,3,4].map((i) => (
-             <div key={i} className="bg-white rounded-[24px] p-2 pb-6 shadow-sm border-[6px] border-[#F4BAE8] hover:-translate-y-2 transition-transform duration-300">
-                <div className="relative group w-full h-52 mb-4 rounded-[16px] overflow-hidden">
-                  <img src={`/images/Moment_${i}.jpg`} alt={`Moment ${i}`} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-[#3a1d52]/80 flex flex-col items-center justify-center p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                     <p className="text-white text-[11px] font-medium text-center leading-relaxed whitespace-pre-wrap px-2">
-                       {overlayText}
-                     </p>
-                  </div>
-                </div>
-                <div className="px-3">
-                   <h4 className="font-bold text-[15px] leading-snug text-[#9A62C6] mb-1">Chia sẻ từ bạn Há Tuấn Kiệt</h4>
-                   <p className="text-[13px] text-gray-500 font-medium">Halloween costume contest... {i}</p>
+             <div key={i} className="relative group w-full overflow-hidden hover:-translate-y-2 transition-transform duration-300 rounded-[24px]">
+                <img src={`/images/Moment_${i}.jpg`} alt={`Moment ${i}`} className="w-full h-auto object-contain drop-shadow-sm" />
+                <div className="absolute inset-0 bg-[#3a1d52]/80 flex flex-col items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <p className="text-white text-[12px] font-medium text-center leading-relaxed whitespace-pre-wrap">
+                     {overlayText}
+                   </p>
                 </div>
              </div>
           ))}
