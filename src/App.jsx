@@ -43,11 +43,11 @@ function Hero() {
         />
         <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
       </div>
-      <div className="relative z-10 flex flex-col items-center text-center px-4 mb-20 w-full">
+      <div className="relative z-10 flex flex-col items-center text-center mb-20 w-full max-w-6xl mx-auto px-6 lg:px-12">
         <h1 className="font-poppins text-[64px] font-semibold leading-[120%] text-center text-gradient-vertical mb-4">
           Đời sống sinh viên
         </h1>
-        <p className="font-poppins text-[20px] font-medium text-[#000000] leading-[120%] text-justify max-w-4xl px-4 md:px-[70px]">
+        <p className="font-poppins text-[20px] font-medium text-[#000000] leading-[120%] text-center w-full">
           Đời sống sinh viên SMD không chỉ gói gọn trong những giờ học trên giảng đường mà còn mở ra một hành trình đầy màu sắc của trải nghiệm, sáng tạo và kết nối. Khám phá ngay!
         </p>
       </div>
@@ -98,7 +98,7 @@ function NewsSection() {
 
           <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full border border-gray-100 group">
             <div className="overflow-hidden h-56">
-                <img src="/images/casting-call.jpg" alt="Casting Call MV UEH50" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/casting-call.jpg" alt="Casting Call MV UEH50" className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-[#B369D7] text-sm font-semibold mb-2">Sự kiện</span>
@@ -121,15 +121,15 @@ function EventSection() {
 
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="w-full lg:w-[55%] flex flex-col group">
-          <div className="relative rounded-3xl overflow-hidden h-[340px] md:h-[400px]">
-            <img src="/images/collective-voice.jpg" alt="The Power of The Collective Voice" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div className="relative rounded-3xl overflow-hidden h-[340px] md:h-[400px] flex items-center bg-[#FDF8FF]">
+            <img src="/images/collective-voice.jpg" alt="The Power of The Collective Voice" className="w-full h-full object-cover object-left group-hover:scale-105 transition-transform duration-700" />
           </div>
-          <div className="flex flex-row justify-between items-center mt-6 gap-4">
-            <div className="pr-4 flex-grow">
-              <h3 className="font-bold text-lg md:text-[20px] mb-1">WORKSHOP BAN NHẠC ICO: THE POWER OF THE COLLECTIVE VOICE</h3>
-              <p className="text-gray-500 font-medium text-sm">20:00 - 21:00, 25.03.2026</p>
+          <div className="flex flex-row justify-between items-start mt-6 gap-4 w-full">
+            <div className="flex-1">
+              <h3 className="font-bold text-[20px] mb-1 leading-[1.3]">WORKSHOP BAN NHẠC ICO: THE POWER OF THE COLLECTIVE VOICE</h3>
+              <p className="text-gray-500 font-medium text-[14px]">20:00 - 21:00, 25.03.2026</p>
             </div>
-            <div className="shrink-0">
+            <div className="shrink-0 mt-1">
                <LightButton>Đăng kí ngay</LightButton>
             </div>
           </div>
@@ -138,7 +138,7 @@ function EventSection() {
         <div className="w-full lg:w-[45%] flex flex-col justify-between gap-6">
           <div className="flex gap-4 group cursor-pointer">
              <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm shrink-0 w-[140px] md:w-[160px] h-[120px] md:h-[130px] flex items-center justify-center bg-white">
-               <img src="/images/casting-call.jpg" alt="Casting" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 p-1" />
+                <img src="/images/casting-call.jpg" alt="Casting Call MV UEH50" className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" />
              </div>
              <div className="flex flex-col justify-between py-1 flex-grow">
                <div>
@@ -153,7 +153,7 @@ function EventSection() {
           
           <div className="flex gap-4 group cursor-pointer">
              <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm shrink-0 w-[140px] md:w-[160px] h-[120px] md:h-[130px] flex items-center justify-center bg-white">
-               <img src="/images/tech-project.jpg" alt="Tech project" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 p-1" />
+               <img src="/images/tech-project.jpg" alt="Tech project" className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
              </div>
              <div className="flex flex-col justify-between py-1 flex-grow">
                <div>
@@ -168,7 +168,7 @@ function EventSection() {
 
           <div className="flex gap-4 group cursor-pointer">
              <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm shrink-0 w-[140px] md:w-[160px] h-[120px] md:h-[130px] flex items-center justify-center bg-white">
-               <img src="/images/hackathon.jpg" alt="Hackathon" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 p-1" />
+               <img src="/images/hackathon.jpg" alt="Hackathon" className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
              </div>
              <div className="flex flex-col justify-between py-1 flex-grow">
                <div>
@@ -190,59 +190,54 @@ function ExchangeSection() {
   const [activePin, setActivePin] = useState(null);
   
   const pins = [
-    { id: 1, name: 'Germany', top: '35%', left: '38%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên Gia Hân', text: 'Cuộc sống tại Stuggart, Đức' },
-    { id: 2, name: 'Italia', top: '40%', left: '42%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trải nghiệm Ý' },
-    { id: 3, name: 'China', top: '35%', left: '68%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Thực tập tại Trung Quốc' },
-    { id: 4, name: 'Thailand', top: '50%', left: '72%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trao đổi tại Thái Lan' },
-    { id: 5, name: 'Macao', top: '45%', left: '78%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Dự án tại Macao' }
+    { id: 1, name: 'Germany', top: '20%', left: '48%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên Gia Hân', text: 'Cuộc sống tại Stuggart, Đức' },
+    { id: 2, name: 'Italia', top: '21%', left: '52%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trải nghiệm Ý' },
+    { id: 3, name: 'China', top: '20%', left: '72%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Thực tập tại Trung Quốc' },
+    { id: 4, name: 'Thailand', top: '40%', left: '76%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trao đổi tại Thái Lan' },
+    { id: 5, name: 'Macao', top: '37%', left: '80%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Dự án tại Macao' }
   ];
 
   return (
-    <section className="relative w-full max-w-6xl mx-auto px-6 lg:px-12 py-20 flex flex-col">
-       {/* Background Map fully positioned to overlay the complete width */}
-       <div className="absolute top-0 inset-x-0 z-0 pointer-events-none flex justify-center w-full px-0 opacity-70">
-           <img src="/images/map.svg" alt="World Map" className="w-[100%] max-w-full h-auto object-cover opacity-80" />
-       </div>
+    <section className="relative w-full max-w-6xl mx-auto px-6 lg:px-12 py-20 mt-20 flex flex-col pt-[100px] min-h-[600px]">
        
-       <div className="relative z-10 w-full flex flex-col items-start pr-0 mt-[160px]">
-        <h2 className="text-[48px] font-semibold font-poppins text-gradient-horizontal leading-[120%] mb-6 tracking-tight">Sinh viên trao đổi</h2>
-        <p className="text-[#000000] font-medium text-[20px] leading-[120%] text-justify mb-8 max-w-4xl">
+       <div className="relative z-10 w-full flex flex-col items-start pr-0 mt-[60px]">
+        <h2 className="text-[48px] font-semibold font-poppins text-gradient-horizontal leading-[120%] mb-6 tracking-tight relative z-20">Sinh viên trao đổi</h2>
+        <p className="text-[#000000] font-medium text-[20px] leading-[120%] text-justify w-full max-w-2xl relative z-20 mb-8">
           Theo dấu những điểm đến mà sinh viên SMD đã đặt chân tới trên khắp thế giới. Mỗi địa điểm không chỉ là một chấm trên bản đồ, mà còn là những câu chuyện thật về cuộc sống, học tập và hành trình thích nghi nơi xứ người.
         </p>
-        <PrimaryButton>Xem thêm</PrimaryButton>
+        <div className="relative z-20"><PrimaryButton>Xem thêm</PrimaryButton></div>
       </div>
 
-      <div className="absolute top-0 inset-x-0 z-10 pointer-events-none w-full h-[500px]">
-         <div className="relative w-full h-full max-w-6xl mx-auto">
-            <div className="absolute top-0 right-0 w-[100%] h-full pointer-events-auto">
-               {pins.map((pin) => (
-                  <div 
-                    key={pin.id} 
-                    className="absolute flex flex-col items-center z-10 hover:z-30 mt-6" 
-                    style={{ top: pin.top, left: pin.left }}
-                    onMouseLeave={() => setActivePin(null)}
-                  >
-                     {activePin === pin.id && (
-                        <div className="absolute bottom-10 w-[240px] bg-white rounded-xl shadow-xl overflow-hidden z-30 transition-all duration-300 pointer-events-none">
-                           <img src={pin.image} alt={pin.name} className="w-full h-32 object-cover" />
-                           <div className="p-3 bg-black/70 absolute bottom-0 w-full text-white">
-                              <p className="text-xs font-bold">{pin.subtitle}</p>
-                              <p className="text-[10px]">{pin.text}</p>
-                           </div>
-                        </div>
-                     )}
-                     <button 
-                        onClick={() => setActivePin(activePin === pin.id ? null : pin.id)}
-                        className="w-8 h-8 flex items-center justify-center text-[#9B64D3] hover:text-[#844391] transform hover:scale-125 transition-transform relative z-20 cursor-pointer focus:outline-none"
-                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                           <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-                        </svg>
-                        <span className="absolute -bottom-5 font-bold text-gray-800 text-xs whitespace-nowrap">{pin.name}</span>
-                     </button>
-                  </div>
-               ))}
-            </div>
+      <div className="absolute inset-x-0 w-full flex justify-center items-center z-0 pointer-events-none" style={{ top: '20px' }}>
+         <div className="relative w-full max-w-5xl pointer-events-auto">
+            <img src="/images/map.svg" alt="World Map" className="w-full h-auto object-contain opacity-80" />
+            {pins.map((pin) => (
+               <div 
+                  key={pin.id} 
+                  className="absolute flex flex-col items-center z-10 hover:z-30 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" 
+                  style={{ top: pin.top, left: pin.left }}
+                  onMouseLeave={() => setActivePin(null)}
+                >
+                   {activePin === pin.id && (
+                      <div className="absolute bottom-8 w-[240px] bg-white rounded-xl shadow-xl overflow-hidden z-30 transition-all duration-300 pointer-events-none">
+                         <img src={pin.image} alt={pin.name} className="w-full h-32 object-cover" />
+                         <div className="p-3 bg-black/70 absolute bottom-0 w-full text-white">
+                            <p className="text-xs font-bold">{pin.subtitle}</p>
+                            <p className="text-[10px]">{pin.text}</p>
+                         </div>
+                      </div>
+                   )}
+                   <button 
+                      onClick={() => setActivePin(activePin === pin.id ? null : pin.id)}
+                      className="w-8 h-8 flex items-center justify-center text-[#9B64D3] hover:text-[#844391] transform hover:scale-125 transition-transform relative z-20 focus:outline-none"
+                   >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                         <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                      </svg>
+                      <span className="absolute -bottom-5 font-bold text-gray-800 text-xs whitespace-nowrap">{pin.name}</span>
+                   </button>
+                </div>
+            ))}
          </div>
       </div>
     </section>
@@ -251,33 +246,35 @@ function ExchangeSection() {
 
 function ProjectsSection() {
   return (
-    <section className="max-w-6xl mx-auto px-6 lg:px-12 py-20 flex flex-col items-center">
+    <section className="max-w-6xl mx-auto px-6 lg:px-12 pt-4 pb-20 flex flex-col items-center">
       <h2 className="text-[48px] font-semibold font-poppins text-gradient-horizontal leading-[120%] mb-6 text-center tracking-tight">Dự án sinh viên</h2>
-      <p className="text-[#000000] font-medium text-[20px] leading-[120%] mb-12 text-justify max-w-4xl">
-        Khám phá những dự án sáng tạo do sinh viên SMD thực hiện, nơi ý tưởng được biến thành sản phẩm thực tế. Từ thiết kế, truyền thông đến nội dung số, mỗi dự án đều phản ánh góc nhìn riêng và hành trình phát triển của các nhà sáng tạo trẻ.
-      </p>
+      <p className="font-poppins text-[20px] font-medium text-[#000000] leading-[120%] text-justify w-full mt-6 mb-16">
+          Khám phá những dự án sáng tạo do sinh viên SMD thực hiện, nơi ý tưởng được biến thành sản phẩm thực tế. Từ thiết kế, truyền thông đến nội dung số, mỗi dự án đều phản ánh góc nhìn riêng và hành trình phát triển của các nhà sáng tạo trẻ.
+        </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 w-full mb-12 overflow-hidden rounded-[32px] shadow-2xl">
-         <div className="relative group w-full h-[300px] md:h-[450px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 w-full mb-12 overflow-hidden rounded-[32px] shadow-2xl md:h-[500px]">
+         <div className="md:col-span-2 relative group w-full h-[300px] md:h-full">
             <img src="/images/tu_phu_chau_ba.png" alt="Tứ Phủ Châu Bà" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-1">
               <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Công nghệ thực tế ảo</p>
               <p className="text-white font-bold text-lg px-4 text-center tracking-wide opacity-90">Nhóm Holdon</p>
             </div>
          </div>
-         <div className="relative group w-full h-[300px] md:h-[450px]">
-            <img src="/images/thumbnail_brainrot.png" alt="Brainrot" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
-              <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
-            </div>
-         </div>
-         <div className="relative group w-full h-[300px] md:h-[450px]">
-            <img src="/images/thumbnail_ytb.png" alt="Bên Trái Kiên Trình" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
-              <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
-            </div>
+         <div className="md:col-span-1 grid grid-rows-2 w-full h-[600px] md:h-full">
+             <div className="relative group w-full h-full">
+                <img src="/images/thumbnail_brainrot.png" alt="Brainrot" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
+                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
+                </div>
+             </div>
+             <div className="relative group w-full h-full">
+                <img src="/images/thumbnail_ytb.png" alt="Bên Trái Kiên Trình" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
+                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
+                </div>
+             </div>
          </div>
       </div>
       
@@ -296,6 +293,7 @@ function MomentsSection() {
           Khám phá những dự án sáng tạo do sinh viên SMD thực hiện, nơi ý tưởng được biến thành sản phẩm thực tế. Từ thiết kế, truyền thông đến nội dung số, mỗi dự án đều phản ánh góc nhìn riêng và hành trình phát triển của các nhà sáng tạo trẻ.
         </p>
 
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mb-12">
           {[1,2,3,4].map((i) => (
              <div key={i} className="relative group w-full overflow-hidden hover:-translate-y-2 transition-transform duration-300 rounded-[24px]">
