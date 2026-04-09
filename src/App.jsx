@@ -81,8 +81,8 @@ function NewsSection() {
                 <img src="/images/stuttgart-exchange.jpg" alt="Sinh viên Gia Hân tại Stuttgart" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <span className="text-[#B369D7] text-sm font-semibold mb-2">Sinh viên trao đổi</span>
-              <h3 className="font-bold text-gray-900 text-[18px] leading-[1.4]">Cuộc sống tại Stuttgart - Đức của sinh viên Gia Hân</h3>
+              <span className="font-poppins text-[14px] font-medium leading-[120%] text-transparent bg-clip-text mb-2 inline-block" style={{ backgroundImage: 'linear-gradient(90deg, #9F53A4 0.05%, #A087FD 99.95%)' }}>Sinh viên trao đổi</span>
+              <h3 className="font-poppins font-semibold text-[#000000] text-[16px] leading-[120%] group-hover:text-[#9B64D3] transition-colors">Cuộc sống tại Stuttgart - Đức của sinh viên Gia Hân</h3>
             </div>
           </div>
 
@@ -91,8 +91,8 @@ function NewsSection() {
                 <img src="/images/tu_phu_chau_ba.png" alt="Dự án Tứ Phủ Châu Bà" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <span className="text-[#B369D7] text-sm font-semibold mb-2">Dự án sinh viên</span>
-              <h3 className="font-bold text-gray-900 text-[18px] leading-[1.4]">Trải nghiệm đạo Mẫu bằng công nghệ Thực tế ảo</h3>
+              <span className="font-poppins text-[14px] font-medium leading-[120%] text-transparent bg-clip-text mb-2 inline-block" style={{ backgroundImage: 'linear-gradient(90deg, #9F53A4 0.05%, #A087FD 99.95%)' }}>Dự án sinh viên</span>
+              <h3 className="font-poppins font-semibold text-[#000000] text-[16px] leading-[120%] group-hover:text-[#9B64D3] transition-colors">Trải nghiệm đạo Mẫu bằng công nghệ Thực tế ảo</h3>
             </div>
           </div>
 
@@ -101,8 +101,8 @@ function NewsSection() {
                 <img src="/images/casting-call.jpg" alt="Casting Call MV UEH50" className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <span className="text-[#B369D7] text-sm font-semibold mb-2">Sự kiện</span>
-              <h3 className="font-bold text-gray-900 text-[18px] leading-[1.4]">Casting Call MV UEH50</h3>
+              <span className="font-poppins text-[14px] font-medium leading-[120%] text-transparent bg-clip-text mb-2 inline-block" style={{ backgroundImage: 'linear-gradient(90deg, #9F53A4 0.05%, #A087FD 99.95%)' }}>Sự kiện</span>
+              <h3 className="font-poppins font-semibold text-[#000000] text-[16px] leading-[120%] group-hover:text-[#9B64D3] transition-colors">Casting Call MV UEH50</h3>
             </div>
           </div>
         </div>
@@ -252,29 +252,20 @@ function ProjectsSection() {
           Khám phá những dự án sáng tạo do sinh viên SMD thực hiện, nơi ý tưởng được biến thành sản phẩm thực tế. Từ thiết kế, truyền thông đến nội dung số, mỗi dự án đều phản ánh góc nhìn riêng và hành trình phát triển của các nhà sáng tạo trẻ.
         </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 w-full mb-12 overflow-hidden rounded-[32px] shadow-2xl md:h-[500px]">
-         <div className="md:col-span-2 relative group w-full h-[300px] md:h-full">
-            <img src="/images/tu_phu_chau_ba.png" alt="Tứ Phủ Châu Bà" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-1">
-              <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Công nghệ thực tế ảo</p>
-              <p className="text-white font-bold text-lg px-4 text-center tracking-wide opacity-90">Nhóm Holdon</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12 md:h-[500px]">
+         <div className="md:col-span-2 relative group w-full h-[300px] md:h-full overflow-hidden rounded-[32px] shadow-2xl">
+            <img src="/images/tu_phu_chau_ba.png" alt="Tứ Phủ Châu Bà" className="w-full h-full object-cover object-top" />
+            <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-1">
+              <p className="text-white font-normal text-xl px-4 text-center tracking-wide">Công nghệ thực tế ảo</p>
+              <p className="text-white font-normal text-lg px-4 text-center tracking-wide opacity-90">Nhóm Holdon</p>
             </div>
          </div>
-         <div className="md:col-span-1 grid grid-rows-2 w-full h-[600px] md:h-full">
-             <div className="relative group w-full h-full">
-                <img src="/images/thumbnail_brainrot.png" alt="Brainrot" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
-                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
-                </div>
-             </div>
-             <div className="relative group w-full h-full">
-                <img src="/images/thumbnail_ytb.png" alt="Bên Trái Kiên Trình" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
-                  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
-                </div>
-             </div>
+         <div className="md:col-span-1 relative group w-full h-[300px] md:h-full overflow-hidden rounded-[32px] shadow-2xl">
+            <img src="/images/thumbnail_ytb.png" alt="Bên Trái Kiên Trình" className="w-full h-full object-cover object-right" />
+            <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-1">
+               <p className="text-white font-normal text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
+               <p className="text-white font-normal text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
+            </div>
          </div>
       </div>
       
