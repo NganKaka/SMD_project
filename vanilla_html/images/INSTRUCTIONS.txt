@@ -1,0 +1,8 @@
+Please drop the images you uploaded into this folder so they can be loaded by the React site.
+
+Recommended filenames based on the App.jsx code:
+- hero-tennis.jpg : ( Ảnh nền sân tennis - Đời sống sinh viên )
+- stuttgart-exchange.jpg : ( Ảnh sinh viên Gia Hân đi Đức )
+- tu-phu-chau-ba.png : ( Ảnh dự án Tứ Phủ Châu Bà )
+- casting-call.png : ( Ảnh Casting Call MV UEH50 )
+- collective-voice.png : ( Ảnh Workshop Band nhạc: The Power of The Collective Voice )

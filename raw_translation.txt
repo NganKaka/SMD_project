@@ -1,0 +1,382 @@
+import React, { useState } from 'react';
+
+function Header() {
+  return (
+    <header class="flex h-[72px] px-6 lg:px-12 py-3 justify-between items-center border-b border-gray-100 bg-white shadow-sm sticky top-0 z-50">
+      <div class="flex items-center cursor-pointer">
+        <img src="/images/SMD_logopurple.png" alt="SMD Logo" class="h-10 object-contain" />
+      </div>
+
+      <nav class="hidden md:flex items-center">
+        <a href="#" class="text-[#5a2b81] hover:text-[#844391] font-bold px-4 py-3 whitespace-nowrap">Về SMD</a>
+        <a href="#" class="text-[#5a2b81] hover:text-[#844391] font-bold px-4 py-3 whitespace-nowrap">Đào tạo</a>
+        <a href="#" class="text-[#5a2b81] hover:text-[#844391] font-bold px-[24px] py-[12px] whitespace-nowrap">Nghiên cứu</a>
+        <a href="#" class="text-[#6857F9] font-bold relative after:content-[''] px-4 py-3 after:absolute after:bottom-0 after:left-4 after:right-4 after:h-[2px] after:bg-[#6857F9] whitespace-nowrap">
+          Đời sống sinh viên
+        </a>
+        <a href="#" class="text-[#5a2b81] hover:text-[#844391] font-bold px-4 py-3 whitespace-nowrap">Tuyển sinh</a>
+      </nav>
+
+      <div class="flex items-center space-x-6">
+        <div class="flex items-center bg-white border border-[#844391] rounded-full p-0.5 cursor-pointer">
+          <span class="px-3 py-1 text-sm text-[#5a2b81] font-bold">EN</span>
+          <span class="px-3 py-1 text-sm bg-[#844391] text-white rounded-full font-bold">VI</span>
+        </div>
+        <button class="text-[#5a2b81] hover:text-[#844391]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width={2.5}>
+             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+  );
+}
+
+function Hero() {
+  return (
+    <section class="relative w-full h-[600px] flex flex-col justify-end overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="/images/hero-tennis.png" 
+          alt="Students playing tennis" 
+          class="w-full h-full object-cover object-center"
+        />
+        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+      </div>
+      <div class="relative z-10 flex flex-col items-center text-center mb-20 w-full max-w-6xl mx-auto px-6 lg:px-12">
+        <h1 class="font-poppins text-[64px] font-semibold leading-[120%] text-center text-gradient-vertical mb-4">
+          Đời sống sinh viên
+        </h1>
+        <p class="font-poppins text-[20px] font-medium text-[#000000] leading-[120%] text-center w-full">
+          Đời sống sinh viên SMD không chỉ gói gọn trong những giờ học trên giảng đường mà còn mở ra một hành trình đầy màu sắc của trải nghiệm, sáng tạo và kết nối. Khám phá ngay!
+        </p>
+      </div>
+    </section>
+  );
+}
+
+const PrimaryButton = ({ children }) => (
+  <button 
+    class="inline-block text-white font-poppins text-[16px] font-medium px-[30px] py-[20px] rounded-[30px] hover:opacity-85 transition-opacity duration-300 whitespace-nowrap"
+    style={{ background: 'linear-gradient(180deg, #9F53A4 0%, #8763DB 80%, #776EFF 100%)' }}
+  >
+    {children}
+  </button>
+);
+
+const LightButton = ({ children }) => (
+  <button class="bg-[#DFD8FA] text-[#60499C] hover:bg-[#D0C6F5] px-6 py-2 rounded-full font-semibold text-sm transition-colors whitespace-nowrap">
+    {children}
+  </button>
+);
+
+function NewsSection() {
+  return (
+    <section class="w-full relative">
+      <div class="absolute inset-0 z-0 h-[400px] bg-gradient-to-b from-[#69539D] to-white"></div>
+      
+      <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+        <h2 class="text-white text-[48px] font-semibold font-poppins leading-[120%] mb-10">Tin nổi bật</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full border border-gray-100 group">
+            <div class="overflow-hidden h-56">
+                <img src="/images/stuttgart-exchange.jpg" alt="Sinh viên Gia Hân tại Stuttgart" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="font-poppins text-[14px] font-medium leading-[120%] text-transparent bg-clip-text mb-2 inline-block" style="background-image: linear-gradient(90deg, #9F53A4 0.05%, #A087FD 99.95%)">Sinh viên trao đổi</span>
+              <h3 class="font-poppins font-semibold text-[#000000] text-[16px] leading-[120%] group-hover:text-[#9B64D3] transition-colors">Cuộc sống tại Stuttgart - Đức của sinh viên Gia Hân</h3>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full border border-gray-100 group">
+            <div class="overflow-hidden h-56">
+                <img src="/images/tu_phu_chau_ba.png" alt="Dự án Tứ Phủ Châu Bà" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="font-poppins text-[14px] font-medium leading-[120%] text-transparent bg-clip-text mb-2 inline-block" style="background-image: linear-gradient(90deg, #9F53A4 0.05%, #A087FD 99.95%)">Dự án sinh viên</span>
+              <h3 class="font-poppins font-semibold text-[#000000] text-[16px] leading-[120%] group-hover:text-[#9B64D3] transition-colors">Trải nghiệm đạo Mẫu bằng công nghệ Thực tế ảo</h3>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full border border-gray-100 group">
+            <div class="overflow-hidden h-56">
+                <img src="/images/casting-call.jpg" alt="Casting Call MV UEH50" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="font-poppins text-[14px] font-medium leading-[120%] text-transparent bg-clip-text mb-2 inline-block" style="background-image: linear-gradient(90deg, #9F53A4 0.05%, #A087FD 99.95%)">Sự kiện</span>
+              <h3 class="font-poppins font-semibold text-[#000000] text-[16px] leading-[120%] group-hover:text-[#9B64D3] transition-colors">Casting Call MV UEH50</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EventSection() {
+  return (
+    <section class="max-w-6xl mx-auto px-6 lg:px-12 py-16">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-[48px] font-semibold font-poppins leading-[120%] text-gradient-horizontal">Sự kiện</h2>
+        <a href="#" class="inline-block text-white font-poppins text-[16px] font-medium px-[30px] py-[20px] rounded-[30px] hover:opacity-85 transition-opacity duration-300 whitespace-nowrap" style="background: linear-gradient(180deg, #9F53A4 0%, #8763DB 80%, #776EFF 100%)">Xem thêm</a>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-6">
+        <div class="w-full lg:w-[55%] flex flex-col group">
+          <div class="relative rounded-3xl overflow-hidden h-[340px] md:h-[400px] flex items-center bg-[#FDF8FF]">
+            <img src="/images/collective-voice.jpg" alt="The Power of The Collective Voice" class="w-full h-full object-cover object-left group-hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div class="flex flex-row justify-between items-start mt-6 gap-4 w-full">
+            <div class="flex-1">
+              <h3 class="font-bold text-[20px] mb-1 leading-[1.3]">WORKSHOP BAN NHẠC ICO: THE POWER OF THE COLLECTIVE VOICE</h3>
+              <p class="text-gray-500 font-medium text-[14px]">20:00 - 21:00, 25.03.2026</p>
+            </div>
+            <div class="shrink-0 mt-1">
+               <button class="bg-[#DFD8FA] text-[#60499C] hover:bg-[#D0C6F5] px-6 py-2 rounded-full font-semibold text-sm transition-colors whitespace-nowrap">Đăng kí ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[45%] flex flex-col justify-between gap-6">
+          <div class="flex gap-4 group cursor-pointer">
+             <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-sm shrink-0 w-[140px] md:w-[160px] h-[120px] md:h-[130px] flex items-center justify-center bg-white">
+                <img src="/images/casting-call.jpg" alt="Casting Call MV UEH50" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" />
+             </div>
+             <div class="flex flex-col justify-between py-1 flex-grow">
+               <div>
+                  <span class="text-[#9A62C6] text-xs font-bold mb-1 block">Hoạt động khoa</span>
+                  <h4 class="font-bold text-[15px] leading-snug group-hover:text-[#9A62C6] transition-colors">Casting Call MV UEH</h4>
+                  <p class="text-gray-500 text-xs mt-1">10.04.2026 - 11.04.2026</p>
+               </div>
+               <div class="self-start sm:self-end mt-2"><button class="bg-[#DFD8FA] text-[#60499C] hover:bg-[#D0C6F5] px-6 py-2 rounded-full font-semibold text-sm transition-colors whitespace-nowrap">Đăng kí ngay</button></div>
+             </div>
+          </div>
+          <hr class="border-gray-100 border-[1.5px]" />
+          
+          <div class="flex gap-4 group cursor-pointer">
+             <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-sm shrink-0 w-[140px] md:w-[160px] h-[120px] md:h-[130px] flex items-center justify-center bg-white">
+               <img src="/images/tech-project.jpg" alt="Tech project" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
+             </div>
+             <div class="flex flex-col justify-between py-1 flex-grow">
+               <div>
+                  <span class="text-[#9A62C6] text-xs font-bold mb-1 block">Chương trình trao đổi</span>
+                  <h4 class="font-bold text-[15px] leading-snug group-hover:text-[#9A62C6] transition-colors">Chương trình Hè Quốc tế 2026: Design Futures</h4>
+                  <p class="text-gray-500 text-xs mt-1">29.06.2026 - 12.07.2026</p>
+               </div>
+               <div class="self-start sm:self-end mt-2"><button class="bg-[#DFD8FA] text-[#60499C] hover:bg-[#D0C6F5] px-6 py-2 rounded-full font-semibold text-sm transition-colors whitespace-nowrap">Đăng kí ngay</button></div>
+             </div>
+          </div>
+          <hr class="border-gray-100 border-[1.5px]" />
+
+          <div class="flex gap-4 group cursor-pointer">
+             <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-sm shrink-0 w-[140px] md:w-[160px] h-[120px] md:h-[130px] flex items-center justify-center bg-white">
+               <img src="/images/hackathon.jpg" alt="Hackathon" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
+             </div>
+             <div class="flex flex-col justify-between py-1 flex-grow">
+               <div>
+                  <span class="text-[#9A62C6] text-xs font-bold mb-1 block">Cuộc thi</span>
+                  <h4 class="font-bold text-[15px] leading-snug group-hover:text-[#9A62C6] transition-colors">CUỘC THI HACKATHON UEH 50: BEYOND TIME - 50 UEH STORIES</h4>
+                  <p class="text-gray-500 text-xs mt-1">23.01.2026 - 24.01.2026</p>
+               </div>
+               <div class="self-start sm:self-end mt-2"><button class="bg-[#DFD8FA] text-[#60499C] hover:bg-[#D0C6F5] px-6 py-2 rounded-full font-semibold text-sm transition-colors whitespace-nowrap">Đăng kí ngay</button></div>
+             </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ExchangeSection() {
+  const [activePin, setActivePin] = useState(null);
+  
+  const pins = [
+    { id: 1, name: 'Germany', top: '20%', left: '48%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên Gia Hân', text: 'Cuộc sống tại Stuggart, Đức' },
+    { id: 2, name: 'Italia', top: '21%', left: '53%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trải nghiệm Ý' },
+    { id: 3, name: 'China', top: '20%', left: '72%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Thực tập tại Trung Quốc' },
+    { id: 4, name: 'Thailand', top: '40%', left: '76%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trao đổi tại Thái Lan' },
+    { id: 5, name: 'Macao', top: '36%', left: '80%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Dự án tại Macao' }
+  ];
+
+  return (
+    <section class="relative w-full max-w-6xl mx-auto px-6 lg:px-12 py-20 mt-20 flex flex-col pt-[100px] min-h-[600px]">
+       
+       <div class="relative z-10 w-full flex flex-col items-start pr-0 mt-[60px]">
+        <h2 class="text-[48px] font-semibold font-poppins text-gradient-horizontal leading-[120%] mb-6 tracking-tight relative z-20">Sinh viên trao đổi</h2>
+        <p class="text-[#000000] font-medium text-[20px] leading-[120%] text-justify w-full max-w-2xl relative z-20 mb-8">
+          Theo dấu những điểm đến mà sinh viên SMD đã đặt chân tới trên khắp thế giới. Mỗi địa điểm không chỉ là một chấm trên bản đồ, mà còn là những câu chuyện thật về cuộc sống, học tập và hành trình thích nghi nơi xứ người.
+        </p>
+        <div class="relative z-20"><a href="#" class="inline-block text-white font-poppins text-[16px] font-medium px-[30px] py-[20px] rounded-[30px] hover:opacity-85 transition-opacity duration-300 whitespace-nowrap" style="background: linear-gradient(180deg, #9F53A4 0%, #8763DB 80%, #776EFF 100%)">Xem thêm</a></div>
+      </div>
+
+      <div class="absolute inset-x-0 w-full flex justify-center items-center z-0 pointer-events-none" style="top: 20px">
+         <div class="relative w-full max-w-5xl pointer-events-auto">
+            <img src="/images/map.svg" alt="World Map" class="w-full h-auto object-contain opacity-80" />
+            {pins.map((pin) => (
+               <div 
+                  key={pin.id} 
+                  class="absolute flex flex-col items-center z-10 hover:z-30 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" 
+                  style={{ top: pin.top, left: pin.left }}
+                  onMouseLeave={() => setActivePin(null)}
+                >
+                   {activePin === pin.id && (
+                      <div class="absolute bottom-8 w-[240px] bg-white rounded-xl shadow-xl overflow-hidden z-30 transition-all duration-300 pointer-events-none">
+                         <img src={pin.image} alt={pin.name} class="w-full h-32 object-cover" />
+                         <div class="p-3 bg-black/70 absolute bottom-0 w-full text-white">
+                            <p class="text-xs font-bold">{pin.subtitle}</p>
+                            <p class="text-[10px]">{pin.text}</p>
+                         </div>
+                      </div>
+                   )}
+                   <button 
+                      onClick={() => setActivePin(activePin === pin.id ? null : pin.id)}
+                      class="w-8 h-8 flex items-center justify-center text-[#9B64D3] hover:text-[#844391] transform hover:scale-125 transition-transform relative z-20 focus:outline-none"
+                   >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                         <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="absolute -bottom-5 font-bold text-gray-800 text-xs whitespace-nowrap">{pin.name}</span>
+                   </button>
+                </div>
+            ))}
+         </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectsSection() {
+  return (
+    <section class="max-w-6xl mx-auto px-6 lg:px-12 pt-4 pb-20 flex flex-col items-center">
+      <h2 class="text-[48px] font-semibold font-poppins text-gradient-horizontal leading-[120%] mb-6 text-center tracking-tight">Dự án sinh viên</h2>
+      <p class="font-poppins text-[20px] font-medium text-[#000000] leading-[120%] text-justify w-full mt-6 mb-16">
+          Khám phá những dự án sáng tạo do sinh viên SMD thực hiện, nơi ý tưởng được biến thành sản phẩm thực tế. Từ thiết kế, truyền thông đến nội dung số, mỗi dự án đều phản ánh góc nhìn riêng và hành trình phát triển của các nhà sáng tạo trẻ.
+        </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12 md:h-[500px]">
+         <div class="md:col-span-2 relative group w-full h-[300px] md:h-full overflow-hidden rounded-[32px] shadow-2xl">
+            <img src="/images/tu_phu_chau_ba.png" alt="Tứ Phủ Châu Bà" class="w-full h-full object-cover object-top" />
+            <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-1">
+              <p class="text-white font-normal text-xl px-4 text-center tracking-wide">Công nghệ thực tế ảo</p>
+              <p class="text-white font-normal text-lg px-4 text-center tracking-wide opacity-90">Nhóm Holdon</p>
+            </div>
+         </div>
+         <div class="md:col-span-1 relative group w-full h-[300px] md:h-full overflow-hidden rounded-[32px] shadow-2xl">
+            <img src="/images/thumbnail_ytb.png" alt="Bên Trái Kiên Trình" class="w-full h-full object-cover object-right" />
+            <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-1">
+               <p class="text-white font-normal text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
+               <p class="text-white font-normal text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
+            </div>
+         </div>
+      </div>
+      
+      <a href="#" class="inline-block text-white font-poppins text-[16px] font-medium px-[30px] py-[20px] rounded-[30px] hover:opacity-85 transition-opacity duration-300 whitespace-nowrap" style="background: linear-gradient(180deg, #9F53A4 0%, #8763DB 80%, #776EFF 100%)">Xem thêm</a>
+    </section>
+  );
+}
+
+function MomentsSection() {
+  const overlayText = ['\"Halloween năm nay thật đặc biệt. Giữa những ngày học tập bận rộn, chúng mình đã có khoảnh khắc cùng nhau \"hóa thân\", cùng nhau vui và cùng nhau lưu giữ những kỷ niệm thật đẹp.\nCảm ơn cả lớp vì đã biến Halloween này thành một ký ức rực rỡ và đầy cảm xúc.\"','\“Là một sinh viên, mình đã quen với hình ảnh thầy cô của SMD nói riêng và của UEH nói chung luôn nghiêm túc và tận tâm đồng hành cùng mình trong từng bài tập, từng dự án với những góp ý đầy tâm huyết. Nhưng tại UEH Day, thầy cô lại xuất hiện với một diện mạo hoàn toàn khác – sôi nổi, hài hước và không ngại "hóa thân" để ủng hộ tinh thần cho đồng đội. Chỉ một lần tham gia nhưng để lại cho em rất nhiều ấn tượng. Đằng sau hình ảnh nghiêm túc thường ngày là những người thầy, người cô vô cùng gần gũi, năng động và tràn đầy năng lượng. Em xin cảm ơn SMD đã tạo cơ hội để em được trải nghiệm, kết nối và nhìn thấy một "phiên bản" khác đầy thú vị của giảng viên UEH!\”','\“Tấm ảnh này được tụi mình chụp vào một khung cảnh buổi chiều hoàng hôn trước cổng chính của Đại Học Thanh Hoa. Đối với mình tấm ảnh này không chỉ chứa đựng kỷ niệm của 3 chị em tụi mình, mà còn thể hiện tình bạn, sự hiếu khách của các bạn trẻ ở đất nước Trung Quốc. Tấm ảnh nhỏ nhắn được một cặp đôi chụp cho tụi mình, mặc dù gặp khó khăn trong giao tiếp khi họ không giỏi tiếng Anh, nhưng họ vẫn rất nhiệt tình giúp tụi mình chụp ảnh và tụi mình cũng vậy. Tụi mình không ngần ngại giúp họ có những tấm hình rất tâm đắc...\”','\“Bức ảnh lớp mình chụp trong buổi 20/10 (trễ) thật sự rạng rỡ và tươi tắn. Hôm đó, các bạn nữ ai cũng xinh đẹp nổi bật, còn các bạn nam thì rất nhiệt tình, chu đáo trong vai trò tổ chức. Mọi người cùng đứng sát bên nhau, trao nhau những nụ cười thật tươi và lời chúc mừng ý nghĩa. Tấm hình này gói trọn không khí vui vẻ, ấm áp và tinh thần đoàn kết tuyệt vời của cả lớp trong ngày tôn vinh Phụ nữ Việt Nam. Một kỷ niệm thật đẹp dành cho mọi người!\”'];
+  return (
+    <section class="bg-[#FDF6FF] py-24 w-full border-t border-b border-[#EACCF0]/50 mt-10">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col items-center">
+        <h2 class="text-[48px] font-semibold font-poppins text-gradient-horizontal leading-[120%] mb-6 text-center tracking-tight">SMD Moments</h2>
+        <p class="text-[#000000] font-medium text-[20px] leading-[120%] mb-16 text-justify max-w-4xl">
+          Khám phá những dự án sáng tạo do sinh viên SMD thực hiện, nơi ý tưởng được biến thành sản phẩm thực tế. Từ thiết kế, truyền thông đến nội dung số, mỗi dự án đều phản ánh góc nhìn riêng và hành trình phát triển của các nhà sáng tạo trẻ.
+        </p>
+
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mb-12">
+          {[1,2,3,4].map((i) => (
+             <div key={i} class="relative group w-full overflow-hidden hover:-translate-y-2 transition-transform duration-300 rounded-[24px]">
+                <img src={`/images/Moment_${i}.jpg`} alt={`Moment ${i}`} class="w-full h-auto object-contain drop-shadow-sm" />
+                <div class="absolute inset-0 bg-[#3a1d52]/80 flex flex-col items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <p class="text-white text-[10px] font-medium text-center leading-relaxed whitespace-pre-wrap">
+                     {overlayText[i-1]}
+                   </p>
+                </div>
+             </div>
+          ))}
+        </div>
+
+        <a href="#" class="inline-block text-white font-poppins text-[16px] font-medium px-[30px] py-[20px] rounded-[30px] hover:opacity-85 transition-opacity duration-300 whitespace-nowrap" style="background: linear-gradient(180deg, #9F53A4 0%, #8763DB 80%, #776EFF 100%)">Xem thêm</a>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer class="bg-[#301D3D] text-white pt-20 pb-12 w-full font-poppins">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-8 flex flex-col">
+           <div class="flex items-center gap-6 mb-12">
+              <div class="text-white font-bold text-[36px] leading-tight flex flex-col">
+                 <span>UEH</span>
+                 <span class="text-[14px] font-semibold tracking-wide text-[#F26522] -mt-1">UNIVERSITY</span>
+              </div>
+              <div class="w-[2px] h-14 bg-gray-400 mx-2"></div>
+              <div class="flex flex-col justify-center">
+                 <p class="text-[16px] leading-snug font-medium">
+                    College of<br/>Technology and Design
+                 </p>
+                 <div class="w-full h-[1px] bg-gray-400 my-1"></div>
+                 <img src="/images/SMD_logowhite.png" alt="SMD" class="h-4 object-contain self-start mt-1" />
+              </div>
+           </div>
+
+           <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 gap-y-8">
+              <div>
+                <h4 class="font-bold mb-3 text-[17px]">Liên hệ</h4>
+                <p class="text-[15px] text-gray-300 font-light mb-1">Điện thoại: +84 283 8295 299</p>
+                <p class="text-[15px] text-gray-300 font-light">Email: smd@ueh.edu.vn</p>
+              </div>
+              <div>
+                <h4 class="font-bold mb-3 text-[17px]">Cơ sở</h4>
+                <p class="text-[15px] text-gray-300 font-light leading-relaxed">279 Nguyễn Tri Phương, <br/>Phường Diên Hồng, Quận 10, TP.HCM</p>
+              </div>
+           </div>
+        </div>
+
+        <div class="col-span-1 md:col-span-4 flex flex-col md:pl-8">
+           <h4 class="font-bold text-[17px] mb-6">Khám phá</h4>
+           <ul class="space-y-4 text-gray-300 text-[15px] font-light">
+             <li><a href="#" class="hover:text-white transition-colors">Về SMD</a></li>
+             <li><a href="#" class="hover:text-white transition-colors">Đào tạo</a></li>
+             <li><a href="#" class="hover:text-white transition-colors">Nghiên cứu</a></li>
+             <li><a href="#" class="hover:text-white transition-colors">Đời sống sinh viên</a></li>
+             <li><a href="#" class="hover:text-white transition-colors">Tuyển sinh</a></li>
+           </ul>
+        </div>
+      </div>
+      
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 pt-8 border-t border-gray-600/30">
+        <p class="text-sm text-gray-400 font-light leading-relaxed">
+           Bản quyền © 2022. Đại học Kinh tế Thành phố Hồ Chí Minh.<br/>
+           Đã đăng ký bản quyền. Phát triển bởi SMD.
+        </p>
+      </div>
+    </footer>
+  );
+}
+
+function App() {
+  return (
+    <div class="min-h-screen flex flex-col w-full font-poppins text-gray-900 selection:bg-[#B369D7] selection:text-white">
+      <Header />
+      <main class="flex-grow flex flex-col">
+        <Hero />
+        <NewsSection />
+        <EventSection />
+        <ExchangeSection />
+        <ProjectsSection />
+        <MomentsSection />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;

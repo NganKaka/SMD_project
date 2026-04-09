@@ -1,0 +1,20 @@
+
+@font-face {
+    font-family: "Fz Poppins";
+    src: url("./fonts/fz-poppins-regular.woff2") format("woff2"); /* Modify with actual path */
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Fz Poppins";
+    src: url("./fonts/fz-poppins-medium.woff2") format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Fz Poppins";
+    src: url("./fonts/fz-poppins-semibold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+body {
+    font-family: "Fz Poppins", "Poppins", sans-serif;
+}
