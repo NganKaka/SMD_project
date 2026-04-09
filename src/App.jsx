@@ -191,10 +191,10 @@ function ExchangeSection() {
   
   const pins = [
     { id: 1, name: 'Germany', top: '20%', left: '48%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên Gia Hân', text: 'Cuộc sống tại Stuggart, Đức' },
-    { id: 2, name: 'Italia', top: '21%', left: '52%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trải nghiệm Ý' },
+    { id: 2, name: 'Italia', top: '21%', left: '53%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trải nghiệm Ý' },
     { id: 3, name: 'China', top: '20%', left: '72%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Thực tập tại Trung Quốc' },
     { id: 4, name: 'Thailand', top: '40%', left: '76%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Trao đổi tại Thái Lan' },
-    { id: 5, name: 'Macao', top: '37%', left: '80%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Dự án tại Macao' }
+    { id: 5, name: 'Macao', top: '36%', left: '80%', image: '/images/stuttgart-exchange.jpg', subtitle: 'Sinh viên XYZ', text: 'Dự án tại Macao' }
   ];
 
   return (
