@@ -214,7 +214,12 @@ function ExchangeSection() {
          <div className="relative w-full h-full max-w-6xl mx-auto">
             <div className="absolute top-0 right-0 w-[50%] h-full pointer-events-auto">
                {pins.map((pin) => (
-                  <div key={pin.id} className="absolute flex flex-col items-center" style={{ top: pin.top, left: pin.left }}>
+                  <div 
+                    key={pin.id} 
+                    className="absolute flex flex-col items-center z-10 hover:z-30" 
+                    style={{ top: pin.top, left: pin.left }}
+                    onMouseLeave={() => setActivePin(null)}
+                  >
                      {activePin === pin.id && (
                         <div className="absolute bottom-10 w-[240px] bg-white rounded-xl shadow-xl overflow-hidden z-30 transition-all duration-300 pointer-events-none">
                            <img src={pin.image} alt={pin.name} className="w-full h-32 object-cover" />
@@ -261,8 +266,8 @@ function ProjectsSection() {
          <div className="relative group w-full h-[300px] md:h-[450px]">
             <img src="/images/thumbnail_brainrot.png" alt="Brainrot" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-[#A259FF]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
-  <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
+          <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Sản xuất truyền thông</p>
+          <p className="text-white font-bold text-xl px-4 text-center tracking-wide">Nhóm Memedia</p>
 </div>
          </div>
          <div className="relative group w-full h-[300px] md:h-[450px]">

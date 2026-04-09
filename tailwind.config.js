@@ -14,7 +14,7 @@ export default {
         }
       },
       fontFamily: {
-        poppins: ['"Poppins"', 'sans-serif'], // Emulating "Fz Poppins"
+        poppins: ['"Fz Poppins"', '"Poppins"', 'sans-serif'], // prioritizing Fz Poppins as requested
       }
     },
   },
