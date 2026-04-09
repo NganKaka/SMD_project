@@ -56,7 +56,10 @@ function Hero() {
 }
 
 const PrimaryButton = ({ children }) => (
-  <button className="bg-[#9A62C6] hover:bg-[#8A52BD] text-white px-10 py-3 rounded-full font-semibold transition-colors shadow-sm whitespace-nowrap">
+  <button 
+    className="inline-block text-white font-poppins text-[16px] font-medium px-[30px] py-[20px] rounded-[30px] hover:opacity-85 transition-opacity duration-300 whitespace-nowrap"
+    style={{ background: 'linear-gradient(180deg, #9F53A4 0%, #8763DB 80%, #776EFF 100%)' }}
+  >
     {children}
   </button>
 );
